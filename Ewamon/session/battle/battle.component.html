@@ -1,0 +1,56 @@
+<body>
+<div id="opponent">
+  <div id="opponentstats" class="statbox">
+    <h1 id="opponentname">{{enemiesUsername}}</h1>
+    <progress class="opponentHealthBar" value="{{enemiesCurrentHp}}" max="{{enemiesEwamonHp}}" style="width: 80%">
+      <span id="opponenthealth" style="width: 100%"></span>
+    </progress>
+    <br>
+    <span id="opponentcurrenthealth" class="health"></span>
+
+    <div class="hitpoints">{{enemiesCurrentHp}}/{{enemiesEwamonHp}} HP</div>
+
+    <span id="opponentstarthealth" class="health"></span>
+  </div>
+  <div id="opponent-image">
+    <img id="opponent-pokemon" [src]="enemiesEwamonImagepath">
+  </div>
+</div>
+<div class="spacebetween"></div>
+<div id="me">
+  <div id="mypokemonimage">
+    <img id="my-pokemon" [src]="myEwamonImagepathBack">
+  </div>
+  <div id="mystats" class="statbox">
+    <h1 id="myname">{{myUsername}}</h1>
+    <input id="runLogo" type="image" src="assets/images/run.png" width="50" height="50" (click)="this.battleService.runFromGame()">
+    <progress class="myOwnHealthBar" value="{{myEwamonCurrentHp}}" max="{{myEwamonHp}}" style="width: 80%">
+      <span id="myhealth" style="width: 100%"></span>
+    </progress>
+    <br>
+    <span id="mycurrenthealth" class="health"></span>
+
+    <div class="hitpoints">{{myEwamonCurrentHp}}/{{myEwamonHp}} HP</div>
+    <input id="hpLogo" type="image" src="assets/images/hplogo.png" width="50" height="50" value="hpLogo" (click)="this.battleService.gainThirtyHealth()" [hidden]="this.battleService.hideHealthBoost">
+
+
+    <span id="mystarthealth" class="health"></span>
+  </div>
+</div>
+<div class="spacebetween"></div>
+
+<div id="textbox">
+  <div id="wrapper">
+    <p id="instructions">{{battleService.dialogueText}}</p>
+    <button id="moveOne" class="{{myEwamonType}}" (click)="myTurn()" [hidden]="!myTurnEnded">{{myMoves[0]?.moveName}}</button>
+    <button id="moveTwo" class="{{myEwamonType}}" (click)="myTurn()" [hidden]="!myTurnEnded">{{myMoves[1]?.moveName}}</button>
+  </div>
+
+  <div id="secondWrapper">
+    <button id="moveThree" class="{{myEwamonType}}" (click)="myTurn()" [hidden]="!myTurnEnded">{{myMoves[2]?.moveName}}</button>
+    <button id="moveFour" class="{{myEwamonType}}" (click)="myTurn()" [hidden]="!myTurnEnded">{{myMoves[3]?.moveName}}</button>
+  </div>
+</div>
+
+</body>
+

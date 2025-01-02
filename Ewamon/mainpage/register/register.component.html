@@ -1,0 +1,45 @@
+<div class="registerDiv">
+  <img id="ianStanding" src="/assets/images/professor_ian.png" width="500" height="500">
+  <div>
+    <form [formGroup]="signupForm" >
+      <div class="bubble" id="text" #bubbleText (click)="spaceEvent()">{{pressSpaceToStart}}</div>
+
+      <div class="container">
+        <input [placeholder]="registerService.emailText" formControlName="email" type="text" id="usernameInput" width="200px" [hidden]="emailInputVisibility">
+        <span id="usernameInput" class="text-danger" *ngIf="(registerFormControl['email'].touched || submitted) && registerFormControl['email'].errors?.['required']">Email is required</span>
+        <span id="usernameInput" class="text-danger" *ngIf="registerFormControl['email'].touched && registerFormControl['email'].errors?.['required']">Enter a valid email address</span>
+        <br>
+        <input [placeholder]="registerService.usernameText" formControlName="username" type="text" id="usernameInput" width="200px" [hidden]="usernameInputVisibility">
+        <span id="usernameInput" class="text-danger" *ngIf="(registerFormControl['username'].touched || submitted) && registerFormControl['username'].errors?.['required']">User Name is required</span>
+        <span id="usernameInput" class="text-danger" *ngIf="registerFormControl['username'].touched && registerFormControl['username'].errors?.['userNameNotAvailable']">User Name is not available</span>
+        <br>
+        <input [placeholder]="registerService.passwordText" formControlName="password" type="password" id="usernameInput" width="200px" [hidden]="passwordInputVisibility">
+        <span id="usernameInput" class="text-danger" *ngIf="(registerFormControl['password'].touched || submitted) && registerFormControl['password'].errors?.['required']">Password is required</span>
+        <span id="usernameInput" class="text-danger" *ngIf="registerFormControl['password'].touched && registerFormControl['password'].errors?.['invalidPassword']">Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercaseletter and 1 number</span>
+        <br>
+        <input [placeholder]="registerService.dateOfBirthText" formControlName="birthday" type="date" id="usernameInput" width="200px" [hidden]="birthdayInputVisibility">
+        <span id="usernameInput" class="text-danger" *ngIf="(registerFormControl['birthday'].touched || submitted) && registerFormControl['birthday'].errors?.['required']">Birthday is required</span>
+        <br>
+        <input [placeholder]="registerService.homeText" formControlName="home" type="text" id="usernameInput" width="200px" [hidden]="homeInputVisibility">
+        <span id="usernameInput" class="text-danger" *ngIf="(registerFormControl['home'].touched || submitted) && registerFormControl['home'].errors?.['required']">City is required</span>
+        <br>
+        <input class="secretQuestion" [placeholder]="registerService.secretQuestionText" formControlName="secretQuestion" type="text" id="usernameInput" width="200px" [hidden]="secretQuestionInputVisibility">
+        <span id="usernameInput" class="text-danger" *ngIf="(registerFormControl['home'].touched || submitted) && registerFormControl['home'].errors?.['required']">Secret question is required</span>
+        <br>
+        <div type="text" id="genderInput" width="200px" [hidden]="genderInputVisibility">
+          <input formControlName="gender" type="radio" value="Male" name="gender" id="btnControlBoy"/>
+          <label  class="btn" for="btnControlBoy"><img src="assets/images/boy.png" id="btnLeft" width="75" height="75"/></label>
+          <input formControlName="gender" type="radio" value="Female" name="gender" id="btnControlGirl"/>
+          <label class="btn" for="btnControlGirl"><img src="assets/images/girl.png" id="btnLeft" width="75" height="75"/></label>
+          <span id="usernameInput" class="text-danger" *ngIf="registerFormControl['gender'].touched && registerFormControl['gender'].errors?.['required']">Choose a gender</span>
+        </div>
+      </div>
+
+      <button  id="continueButton" [hidden]="continueButtonVisibility" (click)="input">Click to skip!</button>
+      <button id="submit" [disabled]="!signupForm.valid" type="submit" [hidden]="registerButtonVisibility" (click)="signUp()">Register</button>
+    </form>
+  </div>
+</div>
+
+
+

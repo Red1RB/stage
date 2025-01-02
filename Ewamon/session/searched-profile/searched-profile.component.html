@@ -1,0 +1,75 @@
+<div class="row" id="page">
+  <div class="col-md-4">
+    <div class="profile-card-4 z-depth-3">
+      <div class="container">
+        <div class="card">
+          <div class="card-body text-center rounded" id="card-top">
+            <div class="user-box profile-img">
+              <img id="image"
+                   src="{{this.userService.searchedUserGender()}}"
+                   width="100px" height="100px">
+            </div>
+            <h5 class="mb-1 text-white">{{this.userService.searchedUser.username}}</h5>
+          </div>
+          <div class="card-body">
+            <img id="houseIcon"
+                 src="assets/images/house-icon.png"
+                 width="50" height="50">
+            <img id="mailIcon"
+                 src="assets/images/mail-icon.png"
+                 width="40" height="35">
+            <img id="nameIcon"
+                 src="assets/images/User-icon.png"
+                 width="40" height="35">
+            <img id="birthdayCake"
+                 src="assets/images/cake-icon.png"
+                 width="40" height="35">
+            <ul class="list-group shadow-none">
+              <li class="list-group-item">
+                <div class="list-details">
+                  <label>Home: </label>
+                  <input type="text" name="location" disabled value="{{this.userService.searchedUser.home}}">
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="list-details">
+                  <label>Email: </label>
+                  <input type="text" name="email" disabled value="{{this.userService.searchedUser.email}}">
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="list-details">
+                  <label>Name: </label>
+                  <input type="text" name="name" disabled value="{{this.userService.searchedUser.username}}">
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="list-details">
+                  <label>Birthday: </label>
+                  <input type="date" name="birthday" disabled
+                         value="{{this.userService.searchedUser.birthday}}">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <div class="card z-depth-3">
+      <div class="card-body">
+        <div class="justify-content-center">
+          <h2 class="text-white">Owned Ewamon</h2>
+        </div>
+        <div class="grid-container rounded">
+          <div *ngFor="let ewamon of userService.searchedUserEwamon; let i = index">
+            <img class="ewamonImage" [src]="userService.searchedUserEwamon[i].imagepathFront">
+            <h2 class="text-white">{{userService.searchedUserEwamon[i].name}}</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

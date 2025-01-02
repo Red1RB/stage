@@ -1,0 +1,12 @@
+<div class="table">
+  <table>
+    <tr>
+      <th>
+        <img [src]="ewamons.imagepathFront" width="100" height="100">
+          <div class="type-2 " id="{{ewamons.type}}">{{ewamons.type}}</div>
+          <div id="ewamonName">{{ewamons.name}}</div>
+      </th>
+    </tr>
+  </table>
+  <button id="buyButton" (click)="moneyChange()" [disabled]="shopService.allowedToBuy()">Buy</button>
+</div>

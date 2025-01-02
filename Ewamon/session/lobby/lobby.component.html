@@ -1,0 +1,40 @@
+<section class="ftco-section" *ngIf="userService.hasEwamon">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-5">
+        <h2>Active Lobbies</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-wrap">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Game ID</th>
+              <th>User name</th>
+              <th>Active Ewamon</th>
+              <th>Players</th>
+              <th>Status</th>
+              <button class="btn btn-primary" (click)="refreshLobby()">Refresh</button>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let lobby of availableLobbies; let i = index">
+              <th scope="row">{{availableLobbies[i].id}}</th>
+              <td>{{availableLobbies[i].username}}</td>
+              <td>{{availableLobbies[i].chosenEwamon}} <img [src]="availableLobbies[i].chosenEwamonImagepath" width="50" height="50"></td>
+              <td>{{availableLobbies[i].playerCount}}/2</td>
+              <td><a class="btn btn-success" (click)="joinGame(i)" [hidden]="lobbyCreated">Join</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div *ngIf="!userService.hasEwamon">
+  <app-choosestarter></app-choosestarter>
+</div>

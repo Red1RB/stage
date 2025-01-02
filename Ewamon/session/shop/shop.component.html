@@ -1,0 +1,22 @@
+<div class="table" id="items" *ngIf="userService.hasEwamon">
+  <div id="money">
+    <p id="moneyTitle">Money</p>
+    <p id="moneyAmount">${{userService.user?.money}}</p>
+  </div>
+  <table>
+    <tr>
+      <th>Ewamon name:</th>
+    </tr>
+    <tr class="noselect" *ngFor="let ewamon of ewamons" (click)="shopService.onSelect(ewamon)"
+        [ngClass]="{selected: ewamon == selectedEwamon}">
+      <td>
+        {{ewamon.name + " $" + ewamon.price}}
+      </td>
+    </tr>
+  </table>
+  <router-outlet></router-outlet>
+</div>
+
+<div *ngIf="!userService.hasEwamon">
+  <app-choosestarter></app-choosestarter>
+</div>

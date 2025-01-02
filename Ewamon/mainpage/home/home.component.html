@@ -1,0 +1,111 @@
+<div *ngIf="userService.hasEwamon">
+  <div class="col-md-12 col-xs-6" id="joinBox">
+    <img src="../../../../assets/images/logoHome.png" height="230" width="800">
+  </div>
+
+
+  <br>
+
+  <div class="row featurette">
+    <div class="col-md-6 col-xs-3">
+      <!-- Define the slideshow container -->
+      <div class="col-md-12 col-xs-6" id="slideshow">
+        <div class="slide-wrapper">
+
+          <!-- Define each of the slides
+          and write the content -->
+
+          <div class="slide">
+            <div class="slide-number">
+              <img src="../../../../assets/ewamon(front)/darkone(front).png" height="230" width="364">
+              <img src="../../../../assets/ewamon(front)/darkyon(front).png" height="230" width="364">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-number">
+              <img src="../../../../assets/ewamon(front)/miscarmen(front).png" height="230" width="364">
+              <img src="../../../../assets/ewamon(front)/mismagmen(front).png" height="230" width="364">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-number">
+              <img src="../../../../assets/ewamon(front)/moflame(front).png" height="230" width="364">
+              <img src="../../../../assets/ewamon(front)/nerohat(front).png" height="230" width="364">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-number">
+              <img src="../../../../assets/ewamon(front)/resilian(front).png" height="230" width="364">
+              <img src="../../../../assets/ewamon(front)/smellduck(front).png" height="230" width="364">
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-number">
+              <img src="../../../../assets/ewamon(front)/yahit(front).png" height="230" width="364">
+              <img src="../../../../assets/ewamon(front)/yaschamp(front)(boxingstyle).png" height="230" width="364">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-xs-3">
+      <h2 class="featurette-heading" style="margin-top: 3rem">Meet all the Ewamon<span class="text-muted"></span></h2>
+      <p class="lead"> In these slideshow are all the Ewamon. We have a total of 13 Ewamon and all of them have a
+        different typing. The Ewamon also have different attacks that are based on their typing. Players can see that
+        because of the names of the moves and the color that shows because every typing has a color that goes with them.
+        When signing up you will pick a starter and get some money. After that go to the shop and buy Ewamon to collect
+        them all. If you want to collect them all you to win allot of battles to earn money.
+        </p>
+    </div>
+  </div>
+
+
+  <div class="row featurette">
+    <div class="col-md-6 col-xs-3">
+      <h2 class="featurette-heading" style="margin-top: 3rem">Introduction to the battle system<span class="text-muted"></span></h2>
+      <p class="lead">Invite your friends and challenge them to a battle with your team of Ewamon. You can choose which
+        ever Ewamon you want as your active Ewamon to battle with. You also have the options to heal for one turn during a battle.
+        If it is not possible to play anymore or you see no hope in the game you can always forfeit. When forfeiting the opponent
+        will earn a small amount of money. Winning a battle will earn you some money. Keep a winning streak and aim for the top of the Ewamon ranking list. Doing so will show everyone who the real
+        Ewamon master is. </p>
+    </div>
+    <div class="col-md-6 col-xs-3">
+      <img class="featurette-image img-fluid mx-auto" src="../../../../assets/images/battlesystem.png" alt="Generic placeholder image">
+    </div>
+  </div>
+
+  <div class="row featurette">
+    <div class="col-md-6 col-xs-3">
+      <ngb-carousel>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img class="slide-image" src="/assets/images/map1.png" alt="Random first slide">
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img class="slide-image" src="/assets/images/map2.png" alt="Random second slide">
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img class="slide-image" src="/assets/images/map3.png" alt="Random third slide">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <div class="col-md-6 col-xs-3">
+      <h2 class="featurette-heading" style="margin-top: 3rem">Introduction to the maps (Coming soon)<span class="text-muted"></span></h2>
+      <p class="lead"></p>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="!userService.hasEwamon">
+  <app-choosestarter></app-choosestarter>
+</div>
+
+
+
+

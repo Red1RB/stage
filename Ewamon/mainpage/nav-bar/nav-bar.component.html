@@ -1,0 +1,48 @@
+<div id="navbar">
+  <img id="logo" src="../../../../assets/images/logosite.jpeg" height="75" width="200" routerLink="/home">
+  <ul>
+    <li routerLink="/home">Home</li>
+    <li routerLink="/wiki">Wiki</li>
+    <li [hidden]="isLoggedIn()" routerLink="/ranking">Ranking</li>
+    <li [hidden]="isLoggedIn()" routerLink="/login">Log in</li>
+    <li [hidden]="isLoggedIn()" routerLink="/register">Sign up</li>
+    <li [hidden]="!isLoggedIn()" routerLink="/shop">Shop</li>
+    <li [hidden]="!isLoggedIn()" routerLink="/lobby">Lobby</li>
+    <li [hidden]="!isLoggedIn()" routerLink="/profile">Profile</li>
+    <li [hidden]="!isLoggedIn()" (click)="logout()">Logout</li>
+    <input [hidden]="!isLoggedIn()" id="searchBar"
+           type="search" placeholder="Search Username" [(ngModel)]="this.userService.searchUsername">
+    <li id="searchButton" [hidden]="!isLoggedIn()" class="navbar-nav pull-right" type="submit"
+            (click)="searchedUser()">Search</li>
+
+<!--    <div [hidden]="!isLoggedIn()" class = "notification">-->
+<!--      <a>-->
+<!--        <div class = "notBtn" >-->
+<!--          <div class = "number">{{notificationString}}</div>-->
+<!--          <img id="bellIcon" src="assets/images/bell.png" width="50" height="50">-->
+<!--          <div class = "box">-->
+<!--            <div class = "display">-->
+<!--              <div class = "nothing">-->
+<!--                <i class="fas fa-child stick"></i>-->
+<!--                <div class = "cent">Looks Like your all caught up!</div>-->
+<!--              </div>-->
+<!--              <div class = "cont">&lt;!&ndash; Fold this div and try deleting evrything inbetween &ndash;&gt;-->
+<!--                <div class = "sec new">-->
+<!--                  <a routerLink="/lobby">-->
+<!--                    <div class = "profCont">-->
+<!--                      <img class = "profile" src="assets/images/{{opponentProfileImage}}.png">-->
+<!--                    </div>-->
+<!--                    <div class = "txt">{{opponentMessage}}</div>-->
+<!--                    <div class = "txt sub">11/7 - 2:30 pm</div>-->
+<!--                  </a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </a>-->
+<!--    </div>-->
+  </ul>
+</div>
+
+

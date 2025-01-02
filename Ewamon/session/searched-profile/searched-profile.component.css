@@ -1,0 +1,97 @@
+#page {
+  padding-top: 2%;
+  margin-left: 1%;
+}
+
+input {
+  float: right;
+  width: 200px;
+}
+
+.card {
+  box-shadow: 0 15px 25px lightgray;
+  background-color: #1E1F25;
+}
+
+#ewamonList {
+  color: whitesmoke;
+}
+
+#image {
+  border-radius: 50px;
+}
+
+#card-top {
+  background-color: #1E1F25;
+}
+
+.btn {
+  color: whitesmoke;
+}
+
+button:hover {
+  background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-size: 100% 100%;
+  color: #27262c;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+  font-weight: bold;
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+#houseIcon {
+  margin-left: -20px;
+  float: left;
+}
+
+#mailIcon {
+  margin-left: -45px;
+  margin-top: 50px;
+  float: left;
+}
+
+#nameIcon {
+  margin-left: -45px;
+  margin-top: 100px;
+  float: left;
+}
+
+#birthdayCake {
+  margin-left: -45px;
+  margin-top: 150px;
+  float: left;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+.ewamonImage {
+  width: 220px;
+  height: 220px;
+  justify-content: center;
+}
+
+label {
+  margin-right: 5%;
+}

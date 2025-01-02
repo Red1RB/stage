@@ -1,0 +1,154 @@
+@font-face {
+  src: url("src/assets/fonts/ewafont.ttf");
+  font-family: 'ewa';
+  font-style: normal;
+  font-weight: 100;
+}
+
+.secretQuestion {
+  font-size: 13px;
+}
+
+.container {
+  margin-top: -140px;
+}
+
+.body {
+  background-color: white;
+  font-family: 'ewa', serif;
+}
+
+.bubble {
+  font-family: 'ewa', serif;
+  height: 515px;
+  width: 60%;
+  min-width: 200px;
+  background: ivory;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15%;
+}
+
+#continueButton {
+  margin-top: 1%;
+  margin-left: 50%;
+  margin-right: 30%;
+}
+
+#submit {
+  margin-top: -342px;
+  margin-left: 51.8%;
+  margin-right: 30%;
+  position: absolute;
+}
+
+#usernameInput {
+  background-color: black;
+  color: white;
+  font-family: 'ewa', serif;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -325px;
+  right: -60px;
+  width: 500px;
+}
+
+#btnControlBoy {
+  display: none;
+}
+
+#btnControlGirl {
+  display: none;
+}
+
+#btnControlBoy:checked + label > img {
+ background-color: black;
+}
+
+#btnControlGirl:checked + label > img {
+  background-color: black;
+}
+
+#boyGender {
+  margin-right: 50px;
+}
+
+#girlGender {
+  margin-left: 50px;
+}
+
+#genderInput {
+  color: white;
+  font-family: 'ewa', serif;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -348px;
+  right: -60px;
+  width: 500px;
+}
+
+#ianStanding {
+  position: absolute;
+  margin-left: 12%;
+  margin-top: 2%;
+}
+
+
+#nextButton {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -180px;
+  right: -55px;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button:hover {
+  background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-size: 100% 100%;
+  color: #27262c;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+  font-weight: bold;
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
+#continueButton {
+  color: whitesmoke;
+}

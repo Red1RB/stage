@@ -1,0 +1,40 @@
+<div class="wholePage" [hidden]="lobbyCreated">
+  <div class="process">
+    <div class="pbj-pokemon-card">
+      <div id="ewamonCardinfo">
+        <div class="background type-1" id="{{createGameSerivce.activeEwamonData?.type}}">
+          <div class="type-2 " id="{{createGameSerivce.activeEwamonData?.type}}"></div>
+          <div class="bg-shine"></div>
+          <div class="bg-overlay"></div>
+        </div>
+        <div class="foreground">
+          <div class="pokemon-box">
+            <div class="flip-box">
+              <div class="flip-box-inner">
+                <div class="flip-box-front">
+                  <img [src]="createGameSerivce.activeEwamonData?.imagepathFront" width="250" height="250"/>
+                </div>
+                <div class="flip-box-back">
+                  <img [src]="createGameSerivce.activeEwamonData?.imagepathBack" width="250" height="250"/>
+                </div>
+              </div>
+            </div>
+            <div id="cardTypeName">
+              <span class="name">{{createGameSerivce.activeEwamonData?.name}}</span>
+              <div class="types">
+                <div class="type" id="{{createGameSerivce.activeEwamonData?.type}}">{{createGameSerivce.activeEwamonData?.type}}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="enterQue">
+  <button (click)="lobbyActivated()" [hidden]="lobbyCreated">Enter Que with {{createGameSerivce.activeEwamonData?.name}}</button>
+</div>
+<p [hidden]="!lobbyCreated">Finding opponent...</p>
+<p [hidden]="!lobbyCreated">You will be kicked out of the queue if you leave this page.</p>
+
