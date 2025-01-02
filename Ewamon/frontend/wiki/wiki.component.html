@@ -1,0 +1,66 @@
+<div id="pokedexDiv" *ngIf="userService.hasEwamon">
+  <img id="pokedex" src="assets/images/pokedexnotpng.PNG">
+</div>
+<div class="pbj-pokemon-card" *ngIf="userService.hasEwamon">
+  <div id="ewamonCardinfo">
+    <div class="background type-this.index" id="{{allEwamon[this.index].type}}">
+      <div class="type-2 " id="{{allEwamon[this.index].type}}"></div>
+      <div class="bg-shine"></div>
+      <div class="bg-overlay"></div>
+    </div>
+    <div class="foreground">
+      <div class="pokemon-box">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img [src]="allEwamon[this.index].imagepathFront" width="250" height="250"/>
+            </div>
+            <div class="flip-box-back">
+              <img [src]="allEwamon[this.index].imagepathBack" width="250" height="250"/>
+            </div>
+          </div>
+        </div>
+        <div id="cardTypeName">
+          <span class="name">{{allEwamon[this.index].name}}</span>
+          <div class="types">
+            <div class="type" id="{{allEwamon[this.index].type}}">{{allEwamon[this.index].type}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skill">
+          <div class="name">{{allEwamonMove[this.indexMove].moveName}}</div>
+          <div class="pp">PP {{allEwamonMove[this.indexMove].movePP}}</div>
+          <div id="{{allEwamonMove[this.indexMove].moveType}}" class="description">{{allEwamonMove[this.indexMove].moveType}}</div>
+        </div>
+        <div class="skill">
+          <div class="name">{{allEwamonMove[this.indexMove + 1].moveName}}</div>
+          <div class="pp">PP {{allEwamonMove[this.indexMove + 1].movePP}}</div>
+          <div id="{{allEwamonMove[this.indexMove + 1].moveType}}" class="description">{{allEwamonMove[this.indexMove + 1].moveType}}</div>
+        </div>
+        <div class="skill">
+          <div class="name">{{allEwamonMove[this.indexMove + 2].moveName}}</div>
+          <div class="pp">PP {{allEwamonMove[this.indexMove + 2].movePP}}</div>
+          <div id="{{allEwamonMove[this.indexMove + 2].moveType}}" class="description">{{allEwamonMove[this.indexMove + 2].moveType}}</div>
+        </div>
+        <div class="skill">
+          <div class="name">{{allEwamonMove[this.indexMove + 3].moveName}}</div>
+          <div class="pp">PP {{allEwamonMove[this.indexMove + 3].movePP}}</div>
+          <div id="{{allEwamonMove[this.indexMove + 3].moveType}}" class="description">{{allEwamonMove[this.indexMove + 3].moveType}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div id="buttonsDiv">
+      <br>
+      <button class="previous round" (click)="getPreviousEwamon()"> < </button>
+      <div class="space">
+      </div>
+      <button class="next round" (click)="getNextEwamon()"> > </button>
+    </div>
+</div>
+
+
+<div *ngIf="!userService.hasEwamon">
+  <app-choosestarter></app-choosestarter>
+</div>

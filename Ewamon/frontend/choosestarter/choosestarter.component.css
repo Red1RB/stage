@@ -1,0 +1,349 @@
+@font-face {
+  src: url("src/assets/fonts/ewafont.ttf");
+  font-family: 'ewa';
+  font-style: normal;
+  font-weight: 100;
+}
+
+.container {
+  margin-top: -140px;
+}
+
+.body {
+  background-color: white;
+  font-family: 'ewa', serif;
+}
+
+.bubble {
+  font-family: 'ewa', serif;
+  height: 515px;
+  width: 60%;
+  min-width: 200px;
+  background: ivory;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 15%;
+}
+
+#continueButton {
+  margin-top: 1%;
+  margin-left: 50%;
+  margin-right: 30%;
+}
+
+#submit {
+  margin-top: -342px;
+  margin-left: 51.8%;
+  margin-right: 30%;
+  position: absolute;
+}
+
+#usernameInput {
+  background-color: black;
+  color: white;
+  font-family: 'ewa', serif;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -325px;
+  right: -60px;
+  width: 500px;
+}
+
+#btnControlBoy {
+  display: none;
+}
+
+#btnControlGirl {
+  display: none;
+}
+
+#btnControlBoy:checked + label > img {
+  background-color: black;
+}
+
+#btnControlGirl:checked + label > img {
+  background-color: black;
+}
+
+#boyGender {
+  margin-right: 50px;
+}
+
+#girlGender {
+  margin-left: 50px;
+}
+
+#genderInput {
+  color: white;
+  font-family: 'ewa', serif;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -348px;
+  right: -60px;
+  width: 500px;
+}
+
+#ianStanding {
+  position: absolute;
+  margin-left: 12%;
+  margin-top: 2%;
+}
+
+
+#nextButton {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: -180px;
+  right: -55px;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button:hover {
+  background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-size: 100% 100%;
+  color: #27262c;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+  font-weight: bold;
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+
+#continueButton {
+  color: whitesmoke;
+}
+
+.flip-card {
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip card container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+  margin-top: -240px;
+  margin-left: -20px;
+  position: absolute;
+}
+
+#page {
+  padding-top: 2%;
+  margin-left: 1%;
+}
+
+input {
+  float: right;
+}
+
+.card {
+  box-shadow: 0 15px 25px lightgray;
+  background-color: #1E1F25;
+}
+
+#ewamonList {
+  color: whitesmoke;
+}
+
+#image {
+  border-radius: 50px;
+}
+
+#card-top {
+  background-color: #cf0000;
+}
+
+.btn {
+  color: whitesmoke;
+}
+
+button:hover {
+  background-image: url('https://scottyzen.sirv.com/Images/v/button.png');
+  background-size: 100% 100%;
+  color: #27262c;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+  font-weight: bold;
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+#houseIcon {
+  margin-left: -20px;
+  float: left;
+}
+
+#mailIcon {
+  margin-left: -45px;
+  margin-top: 50px;
+  float: left;
+}
+
+#nameIcon {
+  margin-left: -45px;
+  margin-top: 100px;
+  float: left;
+}
+
+#birthdayCake {
+  margin-left: -45px;
+  margin-top: 150px;
+  float: left;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 500px;
+  margin-top: -920px;
+  margin-left: 150px;
+
+}
+.grid-item {
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 20px;
+}
+.ewamonImage {
+  width: 220px;
+  height: 220px;
+  justify-content: center;
+}
+
+label {
+  margin-right: 5%;
+}
+
+.flip-card {
+  background-color: transparent;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip card container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  transform: rotateY(180deg);
+  margin-top: -240px;
+  margin-left: -20px;
+  position: absolute;
+}
+
+.IChooseYouButton {
+  margin-top: 35px;
+  margin-left: 30px;
+  font-size: 20px;
+  width: 200px;
+  height: 50px;
+}
+

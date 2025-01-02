@@ -1,0 +1,69 @@
+<div id="pokedexDiv">
+  <img id="pokedex" src="assets/images/pokedexnotpng.PNG">
+  <div id="dpad">
+    <nav class="d-pad">
+      <a class="up"></a>
+      <a class="right" (click)="getNextEwamon()"></a>
+      <a class="down" (click)="getItemDetail()" ></a>
+      <a class="left" (click)="getPreviousEwamon()"></a>
+    </nav>
+  </div>
+</div>
+<div class="pbj-pokemon-card">
+  <div id="ewamonCardinfo">
+    <div class="background type-1" id="{{ewamon.type}}">
+      <div class="type-2 " id="{{ewamon.type}}"></div>
+      <div class="bg-shine"></div>
+      <div class="bg-overlay"></div>
+    </div>
+    <div class="foreground">
+      <div class="pokemon-box">
+        <div class="flip-box">
+          <div class="flip-box-inner">
+            <div class="flip-box-front">
+              <img [src]="ewamon.imagepathFront[0]" width="500" height="500"/>
+            </div>
+            <div class="flip-box-back">
+              <img [src]="ewamon.imagepathFront[1]" width="500" height="500"/>
+            </div>
+          </div>
+        </div>
+        <div id="cardTypeName">
+          <span class="name">{{ewamon.name}}</span>
+          <div class="types">
+            <div class="type" id="{{ewamon.type}}">{{ewamon.type}}</div>
+        </div>
+        </div>
+      </div>
+      <div class="skills">
+        <div class="skill">
+          <div class="name">{{ewamon.move[0].moveName}}</div>
+          <div class="pp">PP {{ewamon.move[0].movePP}}</div>
+          <div id="{{ewamon.move[0].moveType}}" class="description">{{ewamon.move[0].moveType}}</div>
+        </div>
+        <div class="skill">
+          <div class="name">{{ewamon.move[1].moveName}}</div>
+          <div class="pp">PP {{ewamon.move[1].movePP}}</div>
+          <div id="{{ewamon.move[1].moveType}}" class="description">{{ewamon.move[1].moveType}}</div>
+        </div>
+        <div class="skill">
+          <div class="name">{{ewamon.move[2].moveName}}</div>
+          <div class="pp">PP {{ewamon.move[2].movePP}}</div>
+          <div id="{{ewamon.move[2].moveType}}" class="description">{{ewamon.move[2].moveType}}</div>
+        </div>
+        <div class="skill">
+          <div class="name">{{ewamon.move[3].moveName}}</div>
+          <div class="pp">PP {{ewamon.move[3].movePP}}</div>
+          <div id="{{ewamon.move[3].moveType}}" class="description">{{ewamon.move[3].moveType}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--  <div id="buttonsDiv">-->
+<!--    <br>-->
+<!--    <button class="previous round" (click)="getPreviousEwamon()"> < </button>-->
+<!--    <div class="space">-->
+<!--    </div>-->
+<!--    <button class="next round" (click)="getNextEwamon()"> > </button>-->
+<!--  </div>-->
+</div>

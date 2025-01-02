@@ -1,0 +1,38 @@
+<div id="pokedexDiv">
+  <img id="pokedex" src="assets/images/pokedexnotpng.PNG">
+  <div id="dpad">
+    <nav class="d-pad">
+      <a class="up" (click)="getItemDetail()"></a>
+      <a class="right" (click)="getNextmap()"></a>
+      <a class="down" (click)="getCharacterDetail()"></a>
+      <a class="left" (click)="getPreviousMap()"></a>
+    </nav>
+  </div>
+</div>
+<div class="pbj-pokemon-card">
+  <div id="ewamonCardinfo">
+    <div class="background type-1" id="{{map.name}}">
+      <div class="type-2 " id="{{map.description}}"></div>
+      <div class="bg-shine"></div>
+      <div class="bg-overlay"></div>
+    </div>
+    <div class="foreground">
+      <div class="pokemon-box">
+        <img [src]="map.imagePath" width="250" height="250"/>
+        <div id="cardTypeName">
+          <span class="name">{{map.name}}</span>
+          <div class="types">
+            <span class="type">{{map.description}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  <div id="buttonsDiv">-->
+  <!--    <br>-->
+  <!--    <button class="previous round" (click)="getPreviousEwamon()"> < </button>-->
+  <!--    <div class="space">-->
+  <!--    </div>-->
+  <!--    <button class="next round" (click)="getNextEwamon()"> > </button>-->
+  <!--  </div>-->
+</div>

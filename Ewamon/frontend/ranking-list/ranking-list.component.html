@@ -1,0 +1,33 @@
+<section class="ftco-section" >
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center mb-5">
+        <h2>Ranking List</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-wrap">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Username</th>
+              <th>Active Ewamon</th>
+              <th>Wins</th>
+              <th>Profile</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let users of userWins; let i = index">
+              <th scope="row">{{userWins[i].username}}</th>
+              <td>{{userWins[i].activeEwamon}}<img [src]="imagePaths[i]" width="50" height="50"></td>
+              <td>{{userWins[i].wins}}</td>
+              <td><a class="btn btn-success" (click)="searchedProfile(i)">See profile</a></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
